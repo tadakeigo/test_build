@@ -4,39 +4,53 @@
   <meta charset="UTF-8">
   <title>High-resolution image reconstruction with latent diffusion models from human brain activity</title>
   <style>
+    /* for body */
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px; /* for smart phone*/
       line-height: 1.6;
     }
+    /* for h1 */
     h1 {
       font-size: 1.8em;
       margin-bottom: 80px;
-      color:#034587;
+      color: #034587;
       text-align: center;
     }
+    /* for h2 */
     h2 {
-      font-size: 1.4em;
+      font-size: 1.8em;
       margin-bottom: 1em;
-      color:#034587;
+      color: #034587;
       text-align: center;
     }
+    .result {
+      text-align: left;
+    }
+    /* for p */
     .subtitle {
       font-size: 1.6em;
       margin-bottom: 1em;
       text-align: center;
     }
     .highlight {
-        color: #e30a0a; /* ACR 2025の文字だけ赤にする */
-      }
+      color: #e30a0a;
+    }
+    .bold {
+      font-size: 1.1em;
+      font-weight: 800;
+    }
     .authors, .affiliations {
       margin: 0;
       padding: 0;
       text-align: center;
     }
     .links {
-        text-align: center;
-      }      
+      text-align: center;
+    }
     .links a {
       margin-right: 1em;
       text-decoration: none;
@@ -45,8 +59,23 @@
     .links a:hover {
       text-decoration: underline;
     }
+    /* for hr */
     hr {
       margin: 2em 0;
+    }
+    /* for img */
+    .overview-img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .rusults1-img, .rusults2-img, .rusults3-img, .rusults4-img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 80px;
     }
   </style>
 </head>
@@ -73,7 +102,6 @@
     <sup>‡</sup>Equal last author<br>
   </p>
   
-
   <p class="links">
     <a href="#" target="_blank">Paper</a>
     <a href="#" target="_blank">Technical Paper</a>
@@ -84,18 +112,41 @@
 
   <hr>
 
+  <!--Abstract section-->
   <h2>Abstract</h2>
   <p>
-    Large language models (LLMs) often exhibitabrupt emergent behavior, whereby new abil-ities arise at certain points during their train-ing. This phenomenon, commonly referred toas a “phase transition”, remains poorly under-stood. In this study, we conduct an integrativeanalysis of such phase transitions by examin-ing three interconnected perspectives: the sim-ilarity between LLMs and the human brain, theinternal states of LLMs, and downstream taskperformance. We propose a novel interpreta-tion for the learning dynamics of LLMs thatvary in both training data and architecture, re-vealing that three phase transitions commonlyemerge across these models during training:(1) alignment with the entire brain surgesas LLMs begin adhering to task instructions(Brain Alignment and Instruction Following),(2) unexpectedly, LLMs diverge from the brainduring a period in which downstream task ac-curacy temporarily stagnates (Brain Detach-ment and Stagnation), and (3) alignment withthe brain reoccurs as LLMs become capable ofsolving the downstream tasks (Brain Realign-ment and Consolidation). These findings il-luminate the underlying mechanisms of phasetransitions in LLMs, while opening new av-enues for interdisciplinary research bridgingAI and neuroscience.
+    Large language models (LLMs) often exhibit abrupt emergent behavior, whereby new abilities arise at certain points during their training. This phenomenon, commonly referred to as a “phase transition”, remains poorly understood. In this study, we conduct an integrative analysis of such phase transitions by examining three interconnected perspectives: the similarity between LLMs and the human brain, the internal states of LLMs, and downstream task performance. We propose a novel interpretation for the learning dynamics of LLMs that vary in both training data and architecture, revealing that three phase transitions commonly emerge across these models during training: (1) alignment with the entire brain surges as LLMs begin adhering to task instructions (Brain Alignment and Instruction Following), (2) unexpectedly, LLMs diverge from the brain during a period in which downstream task accuracy temporarily stagnates (Brain Detachment and Stagnation), and (3) alignment with the brain reoccurs as LLMs become capable of solving the downstream tasks (Brain Realignment and Consolidation). These findings illuminate the underlying mechanisms of phase transitions in LLMs, while opening new avenues for interdisciplinary research bridging AI and neuroscience.
   </p>
 
+  <hr>
+
+  <!--Overview section-->
+  <h2>Overview of the study</h2>
+  <img src="./img/methods-overview-new.png" alt="Study Overview" class="overview-img">
   <p>
-    
+    <span class="bold">a</span> Brain encoding analysis.<br>
+    <span class="bold">b</span> Probing analysis (top) and the benchmark analysis (bottom).<br>
+    <span class="bold">c</span> Three phase-transition phenomena during the learning process of LLMs, as identified through the results of the encoding, probing, and benchmark analyses. Red, green, and blue lines indicate encoding, probing, and benchmark accuracies, respectively, accros all LLM checkpoints.
   </p>
 
-  <p>
-    
-  </p>
+  <!--Results section-->
+  <h2 class="result">Main Results</h2>
+  <h2>Learning Dynamics of LLMs</h2>
+  <p>add caption.....</p>
+  <img src="./img/result-phase-transitions.png" alt="Learning Dynamics" class="rusults1-img">
+  
+
+  <h2>Changes in the Relationship with the Brain</h2> 
+  <p>add caption.....</p>
+  <img src="./img/result-flatmap-new.png" alt="Relationship with the Brain" class="rusults2-img">
+
+  <h2>Evolution of LLM Internal Representations for Downstream Tasks</h2>
+  <p>add caption.....</p>
+  <img src="./img/result-probing.png" alt="Evolution of LLM Internal Representations" class="rusults3-img">
+
+  <h2>Changes in the Nature of Activations</h2>
+  <p>add caption.....</p>
+  <img src="./img/result-ckpt-cc-id.png" alt="Changes in the Nature of Activations" class="rusults4-img">
 
 </body>
 </html>
